@@ -46,9 +46,9 @@ class Wagon {
     }
 
     totalFood() {
-        return this.passengers.reduce(function (total) {
-          return total.food
-        })
+        return this.passengers.reduce(function (total, passenger) {
+          return total += passenger.food
+        }, 0)
     }
 
         
